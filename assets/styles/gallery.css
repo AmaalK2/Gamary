@@ -1,0 +1,272 @@
+/*-----------------------------------*\
+  #main.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+  
+    --cultured: hsla(0, 0%, 97%, 1);
+    --french-bistre: hsla(31, 17%, 44%, 1);
+    --jet: hsla(0, 0%, 20%, 1);
+    --bistre: hsla(35, 100%, 9%, 1);
+    --bistre_a75: hsla(35, 100%, 9%, 0.75);
+    --camel: hsla(30, 30%, 58%, 1);
+    --umber: hsla(31, 17%, 36%, 1);
+    --golden-brown_a60: hsla(35, 70%, 38%, 0.6);
+    --granite-gray: hsla(0, 0%, 38%, 1);   
+    --white: hsla(0, 0%, 100%, 1);
+    --black: hsla(0, 0%, 0%, 1);
+  
+    /**
+     * typography
+     */
+  
+    --ff-rosario: 'Rosario', sans-serif;
+    --ff-poppins: 'Poppins', sans-serif;
+    
+    --fs-1: 5rem;
+    --fs-2: 4.2rem;
+    --fs-3: 3rem;
+    --fs-4: 2.6rem;
+    --fs-5: 1.8rem;
+    
+    --fw-600: 600;
+    --fw-700: 700;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 12rem;
+  
+    /**
+     * box shadow
+     */
+  
+    --shadow-1: 0px 0px 30px 0px hsla(0, 0%, 0%, 0.2);
+  
+    /**
+     * border radius
+     */
+  
+    --radius-circle: 50%;
+    --radius-20: 20px;
+    --radius-16: 16px;
+    --radius-6: 6px;
+    --radius-4: 4px;
+    --btn-radius: 32px 6px;
+  
+    /**
+     * transition
+     */
+  
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+  
+  }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li { list-style: none; }
+  
+  a,
+  img,
+  span,
+  button,
+  ion-icon { display: block; }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img { height: auto; }
+  
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+  
+  ion-icon { pointer-events: none; }
+  
+  html {
+    font-family: var(--ff-poppins);
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--white);
+    color: var(--granite-gray);
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  ::-webkit-scrollbar { width: 10px; }
+  
+  ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+  
+  ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+  
+  ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li { list-style: none; }
+  
+  a,
+  img,
+  span,
+  button,
+  ion-icon { display: block; }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img { height: auto; }
+  
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+  
+  ion-icon { pointer-events: none; }
+  
+  html {
+    font-family: var(--ff-poppins);
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--white);
+    color: var(--granite-gray);
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  ::-webkit-scrollbar { width: 10px; }
+  
+  ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+  
+  ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+  
+  ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+  
+  
+.shapegallery {
+  width: 20px;
+}
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer {
+  background-color: var(--bistre);
+  color: var(--white);
+}
+
+.footer-top {
+  display: grid;
+  gap: 30px;
+  padding-block-end: 50px;
+  border-block-end: 1px solid var(--french-bistre);
+}
+
+.footer .logo { 
+  color: var(--french-bistre);
+  font-size: 3.2rem;
+}
+
+.footer-brand .footer-text { 
+  margin-block: 20px; 
+}
+
+.social-list {
+display: flex;
+gap: 20px;
+}
+
+.social-link {
+color: var(--french-bistre);
+font-size: 1.8rem;
+}
+
+.footer-list-title {
+color: var(--french-bistre);
+font-family: var(--ff-rosario);
+font-size: 1.8rem;
+font-weight: var(--fw-700);
+margin-block-end: 20px;
+}
+
+.footer-link { padding-block: 7px; }
+
+.footer-list .footer-text { margin-block-end: 24px; }
+
+.footer-bottom {
+padding-block: 40px;
+text-align: center;
+}
+
+.copyright {
+color: var(--french-bistre);
+font-family: var(--ff-rosario);
+font-size: var(--fs-5);
+}
