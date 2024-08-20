@@ -49,3 +49,71 @@ const headerActive = function () {
 }
 
 window.addEventListener("scroll", headerActive);
+
+// Get elements from DOM
+
+const btns = document.querySelectorAll('.buttons button');
+const imgs = document.querySelectorAll('.images img');
+
+// Add a click event to all buttons 
+
+for(let i = 1; i < btns.length; i++) {
+    btns[i].addEventListener('click', filterImg); 
+}
+
+// set active button onclick 
+
+function setActiveBtn(e) {
+    //remove active class from all buttons
+    btns.forEach(btn => {
+        btn.classList.remove('btn-clicked');
+    });
+// add active class to clicked button 
+e.target.classList.add('btn-clicked'); 
+}
+
+//filter images 
+
+function filterImg(e) {
+    // run the active button function 
+    setActiveBtn(e); 
+
+//loop through all images  
+
+imgs.forEach(img => {
+    //expand all images 
+    img.classList.remove('img-shrink'); 
+    img.classList.add('img-expand'); 
+
+    //get data from data attributes 
+    //get image type data 
+
+    const imgType = parseInt(img.dataset.img);
+
+    //get button type data 
+
+    const btnType = parseInt(e.target.dataset.btn);
+
+    /* if the image type and the type of the clicked button  are not the same */
+
+    if(imgType !== btnType) { 
+        // hide the image 
+        img.classList.remove('img-expand'); 
+        img.classList.add('img-shrink');
+    }
+}); 
+}  
+
+// set click event for the 'all' button 
+btns[0].addEventListener('click', (e) => {
+// run the active button function 
+setActiveBtn(e); 
+// loop through all images 
+imgs.forEach(img => {
+    //expand all images 
+    img.classList.remove('img-shrink'); 
+    img.classList.add('img-expanded'); 
+});
+}); 
+
+ 
